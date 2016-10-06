@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: "1st Pair Assignment"
 author: "Chris Kardish and Marie Agosta"
@@ -6,109 +5,9 @@ date: "September 30, 2016"
 output: pdf_document
 ---
 
-The first data set comes via FiveThirtyEight. It is a survey of drug use by age group
-carried out by the US Substance Abuse and Mental Health Services Administration.
-
-```{r,include=FALSE, cache=TRUE}
-
-#setwd('Github/Partner_for_real')
-library(rio)
-d <- import(file = 'https://raw.githubusercontent.com/fivethirtyeight/data/master/drug-use-by-age/drug-use-by-age.csv')
-
-```
-
-There are many drugs to choose from, but for purposes of brevity we'll only cover
-the descriptive statistics of a few, starting with the lighter stuff. 
-
-
-```{r, echo=FALSE}
-
-barplot(d$`alcohol-frequency`, main = "Frequency of Alcohol Use", ylab = "Median # of times used last 12 months", xlab = "Age groups", names.arg = d$age)
-
-```
-
-You notice immediately from the barplot that this particular variable is a bit odd:
-the median rises steadiliy with age before completely leveling off at 52 at age 21.
-That's likely a problem with SAMHSA's or FiveThirtyEight's reporting and it will 
-affect the following descriptive statistics.
-
-Mean:
-```{r, echo=FALSE}
-
-mean_alcoholfreq <- mean(d$`alcohol-frequency`)
-print(mean_alcoholfreq)
-
-```
-Median:
-```{r, echo=FALSE}
-# Mean
-median_alcoholfreq <- median(d$`alcohol-frequency`)
-print(median_alcoholfreq)
-```
-Standard Deviation:
-```{r, echo=FALSE}
-
-sd_alcoholfreq <- sd(d$`alcohol-frequency`)
-print(sd_alcoholfreq)
-
-```
-Range:
-```{r, echo=FALSE}
-range_alcoholfreq <- range(d$`alcohol-frequency`)
-print(range_alcoholfreq)
-```
-
-Moving on to marijuana. Here's a plot for percentage of people in a given age group
-who have used marijuana in the past 12 months. 
-
-```{r, echo=FALSE}
-
-barplot(d$`marijuana-use`, main = "Whether Respondent Uses Marijuana", ylab = "Percentage of people", xlab = "Age groups", names.arg = d$age)
-
-```
-
-Now here's a barplot for marijuana use by age, defined as frequency of use in the last
-12 months.This of course only applies to people who identify as users.
-
-```{r, echo=FALSE}
-
-barplot(d$`marijuana-frequency`, main = "Frequency of Marijuana Use", ylab = "Median # of times used last 12 months", xlab = "Age groups", names.arg = d$age)
-
-```
-
-Initial visual hypothesis: as you age you're less likely to be a marijuana user, but if you do
-remain a user into your 30s you're likely to smoke as much as the kids or even more. 
-But obviously this idea would have to be tested for statistical significance. 
-
-Let's close things out by answering the following question: is the average number of 
-heroin users larger than the average number of meth users? Let's find out! 
-
-Percentage of those in any age group who used heroin in the past 12 months:
-```{r, echo=FALSE}
-
-mean_heroin <- mean(d$`heroin-use`)
-print(mean_heroin)
-
-```
-Percentage of those in any age group who used meth in the past 12 months:
-```{r, echo=FALSE}
-
-mean_meth <- mean(d$`meth-use`)
-print(mean_meth)
-
-```
-It appears meth remains slightly more popular, at least from this vantage point.
-
-=======
----
-title: "1st Pair Assignment"
-author: "Chris Kardish and Marie Agosta"
-date: "September 30, 2016"
-output: pdf_document
----
-
-The first data set comes via FiveThirtyEight. It is a survey of drug use by age group
-carried out by the US Substance Abuse and Mental Health Services Administration.
+This is the first pair assignment from Chris Kardish and Marie Agosta.
+The first data set comes via FiveThirtyEight; the second is core R and is sourced
+from a second script. First, the FiveThirtyEight stuff. It is a survey of drug use by age group carried out by the US Substance Abuse and Mental Health Services Administration.
 
 ```{r,include=FALSE, cache=TRUE}
 
@@ -209,5 +108,3 @@ using the "source" function.Doing so also brings the underlying data set for it
 source("MCAgosta.R")
 
 ```
-
->>>>>>> origin/master
