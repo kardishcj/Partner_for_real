@@ -7,7 +7,7 @@ MCAgosta.R contains Marie's separate script, which is dynamically linked to CK_M
 CK_MA_pair1.Rmd
 
 The first part of the assignment examines FiveThirtyEight data that came from a survey of drug use 
-in the U.S.
+in the U.S. Using simply descriptive statistics it makes some observations. For instance: as you age you're less likely to be a marijuana user, but if you do remain a user into your 30s you're likely to smoke as much as young people or even more. But obviously this idea would have to be tested for statistical significance. 
 
 The second part uses core R data. It searches through the core R and downloads UKLungDeaths. It is cmprised of three time-series objects: both sexes (ldeaths), males (mdeaths) and females (fdeaths).
 It shows monthly deaths from bronchitis, emphysema and asthma in the UK, 1974–1979
