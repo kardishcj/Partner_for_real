@@ -145,22 +145,13 @@ The data is broken down into three different time-series objects:
 both sexes (ldeaths), males (mdeaths) and females (fdeaths).
 It shows monthly deaths from bronchitis, emphysema and asthma in the UK, 1974-1979
 ```{r}
-plot(ldeaths)
-plot(fdeaths)
-plot(mdeaths)
-
-```
-
-Plotting male and female deaths (below) to see if there is a trend or if there are large disparities 
-
-```{r}
-plot(mdeaths, fdeaths)
+plot(ldeaths, main = "Male & Female Lung Deaths", ylab = "Deaths")
+plot(fdeaths, main = "Female Lung Deaths", ylab = "Deaths")
+plot(mdeaths, main = "Male Lung Deaths", ylab = "Deaths")
 
 ```
 
 The overall trend is the same. Look at range first for female and male deaths 
-
-
 
 ```{r}
 
