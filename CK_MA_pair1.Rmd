@@ -45,6 +45,8 @@ Median:
 median_alcoholfreq <- median(d$`alcohol-frequency`)
 print(median_alcoholfreq)
 ```
+We immediately notice that the mean is far smaller than the median, indicating a strong
+left skew. 
 Standard Deviation:
 ```{r, echo=FALSE}
 
@@ -52,6 +54,10 @@ sd_alcoholfreq <- sd(d$`alcohol-frequency`)
 print(sd_alcoholfreq)
 
 ```
+That seems like a large standard deviation, but perhaps not, given the units and
+clear differences between age groups that you would naturally expect (12 year olds
+don't tend to do a lot of drinking)
+
 Range:
 ```{r, echo=FALSE}
 range_alcoholfreq <- range(d$`alcohol-frequency`)
